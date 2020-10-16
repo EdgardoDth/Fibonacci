@@ -1,0 +1,20 @@
+import numpy as np
+
+#exponentiation by squaring
+def ebs(bas, exp):
+    t = bas.copy()
+    while exp > 0:
+        if exp % 2:
+            t = np.dot(t,bas)
+        bas = np.dot(bas,bas)
+        exp = exp // 2
+    return t
+
+m = np.array([[1,1],[1,0]], dtype=object)
+
+fibN = (int)(input("Ingresa posicion de la secuncia de Fibonacci: "))
+
+fib = ebs(m, fibN)
+print(fib[1][1])
+#entire matrix
+print(fib)
