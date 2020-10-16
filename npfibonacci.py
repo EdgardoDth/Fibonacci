@@ -12,9 +12,13 @@ def ebs(bas, exp):
 
 m = np.array([[1,1],[1,0]], dtype=object)
 
-fibN = (int)(input("Ingresa posicion de la secuncia de Fibonacci: "))
+fibN = (int)(input("Enter the fibonacci position: "))
 
 fib = ebs(m, fibN)
 print(fib[1][1])
+'''
+fib = n+2 f+1
+	  n+1 f
+'''
 #entire matrix
 print(fib)
